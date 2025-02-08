@@ -24,45 +24,45 @@ Esta APP facilita la reserva de turnos mediante la implementación de un fronten
 
 src/
 │
-├── 📂 api/                  # Lógica relacionada con la API (axios, endpoints, etc.)
-│   └── auth.ts           # Endpoints de autenticación
-│   └── appointments.ts   # Endpoints de turnos
-│   └── index.ts          # Exportación de todos los servicios de API
+├── 📂 api/               # Lógica relacionada con la API (axios, endpoints, etc.)
+│   └── auth.ts             # Endpoints de autenticación
+│   └── appointments.ts     # Endpoints de turnos
+│   └── index.ts            # Exportación de todos los servicios de API
 │
-├── 📂 assets/               # Archivos estáticos (imágenes, fuentes, etc.)
+├── 📂 assets/            # Archivos estáticos (imágenes, fuentes, etc.)
 │   └── images/
 │   └── styles/
 │
-├── 📂 components/           # Componentes reutilizables
-│   ├── common/           # Componentes comunes (botones, inputs, etc.)
-│   ├── layout/           # Componentes de diseño (header, footer, sidebar)
-│   └── ui/               # Componentes de UI específicos (modales, cards, etc.)
+├── 📂 components/        # Componentes reutilizables
+│   ├── common/             # Componentes comunes (botones, inputs, etc.)
+│   ├── layout/             # Componentes de diseño (header, footer, sidebar)
+│   └── ui/                 # Componentes de UI específicos (modales, cards, etc.)
 │
-├── 📂 hooks/                # Custom hooks
-│   └── useAuth.ts        # Hook para manejar la autenticación
-│   └── useAppointments.ts # Hook para manejar los turnos
+├── 📂 hooks/             # Custom hooks
+│   └── useAuth.ts          # Hook para manejar la autenticación
+│   └── useAppointments.ts  # Hook para manejar los turnos
 │
-├── 📂 pages/                # Páginas de la aplicación
-│   ├── Login.tsx         # Página de login
-│   ├── Register.tsx      # Página de registro
-│   ├── Dashboard.tsx     # Página principal del dashboard
-│   └── Profile.tsx       # Página de perfil de usuario
+├── 📂 pages/             # Páginas de la aplicación
+│   ├── Login.tsx           # Página de login
+│   ├── Register.tsx        # Página de registro
+│   ├── Dashboard.tsx       # Página principal del dashboard
+│   └── Profile.tsx         # Página de perfil de usuario
 │
-├── 📂 store/                # Estado global (Zustand)
-│   └── authStore.ts      # Store para la autenticación
+├── 📂 store/             # Estado global (Zustand)
+│   └── authStore.ts        # Store para la autenticación
 │   └── appointmentStore.ts # Store para los turnos
 │
-├── 📂 types/                # Tipos de TypeScript
-│   └── user.ts           # Tipos relacionados con el usuario
-│   └── appointment.ts    # Tipos relacionados con los turnos
+├── 📂 types/             # Tipos de TypeScript
+│   └── user.ts             # Tipos relacionados con el usuario
+│   └── appointment.ts      # Tipos relacionados con los turnos
 │
-├── 📂 utils/                # Utilidades y helpers
-│   └── authHelpers.ts    # Funciones de ayuda para la autenticación
-│   └── dateHelpers.ts    # Funciones de ayuda para manejo de fechas
+├── 📂 utils/            # Utilidades y helpers
+│   └── authHelpers.ts      # Funciones de ayuda para la autenticación
+│   └── dateHelpers.ts      # Funciones de ayuda para manejo de fechas
 │
-├── App.tsx               # Componente principal de la aplicación
-├── main.tsx              # Punto de entrada de la aplicación
-└── 📂routes/               # Configuración de rutas (React Router)
+├── App.tsx                 # Componente principal de la aplicación
+├── main.tsx                # Punto de entrada de la aplicación
+└── 📂routes/            # Configuración de rutas (React Router)
     └── AppRouter.tsx
 
 ```
