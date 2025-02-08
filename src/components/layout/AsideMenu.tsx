@@ -1,5 +1,6 @@
 // src/components/layout/AsideMenu.tsx
-import { NavLink } from 'react-router-dom';
+
+import { NavlinkComponent } from '../ui/Navlink';
 
 type AsideMenuProps = {
   asideToggle: boolean;
@@ -15,46 +16,13 @@ const AsideMenu = ({ asideToggle }: AsideMenuProps) => {
       <nav className="p-4">
         <ul className="space-y-2">
           <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `block p-2 rounded ${
-                  isActive
-                    ? 'bg-blue-500 text-white'
-                    : 'text-gray-300 hover:bg-gray-700'
-                }`
-              }
-            >
-              Inicio
-            </NavLink>
+            <NavlinkComponent route="" />
           </li>
           <li>
-            <NavLink
-              to="/dashboard"
-              className={({ isActive }) =>
-                `block p-2 rounded ${
-                  isActive
-                    ? 'bg-blue-500 text-white'
-                    : 'text-gray-300 hover:bg-gray-700'
-                }`
-              }
-            >
-              Dashboard
-            </NavLink>
+            <NavlinkComponent route="dashboard" />
           </li>
           <li>
-            <NavLink
-              to="/profile"
-              className={({ isActive }) =>
-                `block p-2 rounded ${
-                  isActive
-                    ? 'bg-blue-500 text-white'
-                    : 'text-gray-300 hover:bg-gray-700'
-                }`
-              }
-            >
-              Perfil
-            </NavLink>
+            <NavlinkComponent route="profile" />
           </li>
         </ul>
       </nav>

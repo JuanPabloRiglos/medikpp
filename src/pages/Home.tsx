@@ -14,12 +14,17 @@ const Home = () => {
   //   }, [user, navigate]);
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl font-bold text-cyan-600">
-        Bienvenido a la aplicación
-      </h1>
-      <p>Por favor, inicia sesión o regístrate para continuar.</p>
-    </div>
+    <main className="p-4 w-full h-full">
+      <h1 className="text-2xl font-bold text-cyan-600">Bienvenido a Medikpp</h1>
+      <div className=" w-full h-full flex flex-col justify-center items-center">
+        <section>
+          <p>Por favor, inicia sesión o regístrate para continuar.</p>
+        </section>
+        <article>
+          <img src="" alt="" />
+        </article>
+      </div>
+    </main>
   );
 };
 
