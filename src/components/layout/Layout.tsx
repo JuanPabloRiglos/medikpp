@@ -12,7 +12,7 @@ const Layout = () => {
   };
 
   return (
-    <main className="w-screen h-screen text-slate-700 flex flex-col">
+    <main className="w-screen h-screen relative text-slate-700 flex flex-col overflow-hidden">
       <Navbar toggleAside={toggleAside} asideToggle={asideToggle} />
       <section className="relative w-full h-full flex justify-center gap-2">
         <AsideMenu asideToggle={asideToggle} />

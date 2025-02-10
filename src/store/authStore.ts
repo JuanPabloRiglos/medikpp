@@ -1,17 +1,23 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
 type AuthState = {
-  user: null | { id: string; email: string };
-  login: (email: string, password: string) => Promise<void>;
+  token: string | null;
+  setToken: (token: string) => void;
   logout: () => void;
 };
 
-const useAuthStore = create<AuthState>((set) => ({
-  user: null,
-  login: async (email, password) => {
-    // Lógica de login
-  },
-  logout: () => set({ user: null }),
-}));
+const useAuthStore = create(
+  persist<AuthState>(
+    (set) => ({
+      token: null,
+      setToken: (newToken: string) => set({ token: newToken }),
+      logout: () => set({ token: null }),
+    }),
+    {
+      name: 'auth-storage', // Nombre de la clave en localStorage
+    }
+  )
+);
 
 export default useAuthStore;

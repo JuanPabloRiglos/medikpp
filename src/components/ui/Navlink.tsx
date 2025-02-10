@@ -21,7 +21,7 @@ export function NavlinkComponent({
         }`
       }
     >
-      {children || !route ? 'Inicio' : `${route}`}{' '}
+      {children ? children : !route ? 'Inicio' : `${route}`}
       {/* Usa children si está definido, de lo contrario, muestra "Enlace" */}
     </NavLink>
   );
