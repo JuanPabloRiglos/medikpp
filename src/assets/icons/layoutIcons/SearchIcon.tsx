@@ -1,8 +1,8 @@
-interface IconProps {
+interface IconPorps {
   styles?: string;
 }
 
-export function OpenEye({ styles }: IconProps) {
+export function SearchIcon({ styles }: IconPorps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,11 +14,11 @@ export function OpenEye({ styles }: IconProps) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`icon icon-tabler icons-tabler-outline icon-tabler-eye ${styles}`}
+      className={`icon icon-tabler icons-tabler-outline icon-tabler-search ${styles}`}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-      <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+      <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+      <path d="M21 21l-6 -6" />
     </svg>
   );
 }

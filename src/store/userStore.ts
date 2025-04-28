@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 import { UserData } from '../types/user';
 
 type UserState = {
-  user: UserData | null;
+  userLogged: UserData | null;
   setUser: (user: UserData) => void;
   clearUser: () => void;
 };
@@ -11,12 +11,12 @@ type UserState = {
 const useUserStore = create(
   persist<UserState>(
     (set) => ({
-      user: null,
+      userLogged: null,
       setUser: (newUser: UserData) => {
         console.log('Setee al user con este valor', newUser);
-        set({ user: newUser });
+        set({ userLogged: newUser });
       },
-      clearUser: () => set({ user: null }),
+      clearUser: () => set({ userLogged: null }),
     }),
     {
       name: 'user-storage', // Nombre de la clave en localStorage

@@ -3,13 +3,14 @@ import useUserStore from '../../store/userStore';
 import useAuthStore from '../../store/authStore';
 import { NavlinkComponent } from '../ui/Navlink';
 import { useNavigate } from 'react-router-dom';
+import { LogOut } from '../../assets/icons/layoutIcons/LogOut';
 
 type AsideMenuProps = {
   asideToggle: boolean;
 };
 
 const AsideMenu = ({ asideToggle }: AsideMenuProps) => {
-  const { user, clearUser } = useUserStore();
+  const { userLogged, clearUser } = useUserStore();
   const { logout } = useAuthStore();
   const navigate = useNavigate();
 
@@ -21,7 +22,7 @@ const AsideMenu = ({ asideToggle }: AsideMenuProps) => {
   return (
     <aside
       className={`bg-gray-800 w-7/12 h-full flex flex-col justify-between absolute transition-transform duration-300
-        sm:w-4/12 ${asideToggle ? ' left-0' : '-left-[100%]'}`}
+        sm:w-4/12 ${asideToggle ? ' left-0 z-50' : '-left-[100%] '}`}
     >
       <nav className="p-4">
         <ul className="space-y-2">
@@ -36,13 +37,13 @@ const AsideMenu = ({ asideToggle }: AsideMenuProps) => {
           </li>
         </ul>
       </nav>
-      <article className=" align-bottom  flex flex-col justify-center items-center">
-        <span className="text-base font-semibold italic text-blue-500">{`${user?.name} Logeado`}</span>
+      <article className=" align-bottom  flex gap-2 justify-center items-center py-2">
+        <span className="text-base font-semibold italic text-blue-500">{`Usuario ${userLogged?.name} `}</span>
         <button
-          className="text-red-800 font-semibold hover:text-red-500 hover:scale-105 transition-all duration-150"
+          className="text-red-800 font-semibold hover:text-red-500 hover:scale-105 transition-all duration-150 flex items-center gap-2"
           onClick={handleLogout}
         >
-          Cerrar
+          <LogOut styles="" />
         </button>
       </article>
     </aside>

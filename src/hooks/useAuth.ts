@@ -5,8 +5,8 @@ import { register, login } from '../api';
 import { normalizedDataFn } from '../utils/formsUtils.ts';
 
 //types
-import { LoginData, LoginResponse, RegisterData } from '../types/Auth.ts';
-import { UserData } from '../types/user.ts';
+import { LoginData, LoginResponse } from '../types/Auth.ts';
+import { UserData, RegisterData } from '../types/user.ts';
 
 export function useAuth() {
   const [userData, setUserData] = useState<UserData | LoginResponse | null>(
@@ -44,7 +44,7 @@ export function useAuth() {
       return { responseData: null, error: err.message }; // Devolvemos el error en caso de error
     }
   };
-
+  ////////////////////////////////////////////////////////////////////////////////////////////////////
   const loginFnHook = async (
     data: LoginData
   ): Promise<{ responseData: LoginResponse | null; error: string | null }> => {

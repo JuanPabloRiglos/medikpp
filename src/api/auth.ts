@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import apiClient from './apiClient';
-import { LoginData, LoginResponse, RegisterData } from '../types/Auth';
-import { UserData } from '../types/user';
+import { LoginData, LoginResponse } from '../types/Auth';
+import { UserData, RegisterData } from '../types/user';
 
 export const register = async (
   data: RegisterData
@@ -22,7 +22,6 @@ export const login = async (
 ): Promise<LoginResponse | { error: string }> => {
   try {
     const response = await apiClient.post('/auth/login', data);
-    console.log('Data devuelta por api en LOGIN:', response.data);
     return response.data as LoginResponse;
   } catch (error: any) {
     return {

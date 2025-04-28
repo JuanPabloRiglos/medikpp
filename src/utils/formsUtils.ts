@@ -1,4 +1,5 @@
-import { LoginData, RegisterData } from '../types/Auth.ts';
+import { LoginData } from '../types/Auth.ts';
+import { RegisterData } from '../types/user.ts';
 
 // Funciones a utilizar en logica de formularios
 const normalizedDataFn = (data: RegisterData | LoginData): RegisterData => {

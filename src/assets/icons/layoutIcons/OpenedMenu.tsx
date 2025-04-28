@@ -2,7 +2,7 @@ interface IconProps {
   styles?: string;
 }
 
-export function OpenEye({ styles }: IconProps) {
+export function OpenedMenu({ styles }: IconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -14,11 +14,13 @@ export function OpenEye({ styles }: IconProps) {
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className={`icon icon-tabler icons-tabler-outline icon-tabler-eye ${styles}`}
+      className={`icon icon-tabler icons-tabler-outline icon-tabler-menu-3 ${styles} `}
     >
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
-      <path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6" />
+      <path d="M10 6h10" />
+      <path d="M4 12h16" />
+      <path d="M7 12h13" />
+      <path d="M4 18h10" />
     </svg>
   );
 }

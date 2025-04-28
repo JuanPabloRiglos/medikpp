@@ -2,6 +2,7 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoadingSpinner from '../components/common/LoadingSpinner'; // Componente de carga reutilizable
+import VisitorLayout from '../components/layout/VisitorLayout.tsx';
 
 // Lazy imports
 const Layout = lazy(() => import('../components/layout/Layout'));
@@ -16,11 +17,14 @@ const AppRouter = () => {
     <BrowserRouter>
       <Suspense fallback={<LoadingSpinner />}>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          {/* Rutas para visitantes con layout */}
+          <Route path="/visitor" element={<VisitorLayout />}>
+            <Route index element={<Home />} />
+            <Route path="login" element={<Login />} />
+            <Route path="register" element={<Register />} />
+          </Route>
           {/* Rutas con layout */}
           <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="profile" element={<Profile />} />
           </Route>
